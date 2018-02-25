@@ -4200,8 +4200,8 @@ SOCKET="local:/var/spool/postfix/var/run/opendkim/opendkim.sock"
       <code class="document">
 Syslog                  yes
 LogWhy                  yes
-
-Domain                  <i>example.com,example.co.uk,example.org</i>
+<!-- Domain is ignored if a KeyTable is defined: http://opendkim.org/opendkim.conf.5.html -->
+<span class="comment"># Domain                  example.com</span>
 <span class="comment"># KeyFile</span>
 Selector                <i>default</i> 
 SubDomains              yes
