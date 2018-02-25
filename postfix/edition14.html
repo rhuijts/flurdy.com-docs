@@ -4200,10 +4200,11 @@ SOCKET="local:/var/spool/postfix/var/run/opendkim/opendkim.sock"
       <code class="document">
 Syslog                  yes
 LogWhy                  yes
-<!-- Domain is ignored if a KeyTable is defined: http://opendkim.org/opendkim.conf.5.html -->
-<span class="comment"># Domain                  example.com</span>
-<span class="comment"># KeyFile</span>
-Selector                <i>default</i> 
+<!-- Domain, KeyFile and Selector are ignored if a KeyTable is defined. -->
+<!-- See http://opendkim.org/opendkim.conf.5.html -->
+<span class="comment">#Domain                 example.com</span>
+<span class="comment">#KeyFile                /etc/mail/dkim.key</span>
+<span class="comment">#Selector               2018</span>
 SubDomains              yes
 
 ExternalIgnoreList      /etc/opendkim/TrustedHosts
