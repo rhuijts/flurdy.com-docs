@@ -4002,7 +4002,8 @@ tar cf mail.xxxxx.tar  mail-*.xxxxx.tgz </code>
 		<p>
 			Main domain (example.com) DNS TXT field:
 		</p>
-		<code>"v=spf1 a mx a:<i>myserver.example.com</i> include:aspmx.googlemail.com include:gmail.com include:_spf.google.com ~all"</code>
+		<!-- Removed aspmx.googlemail.com and gmail.com because they redirect to _spf.google.com -->
+		<code>"v=spf1 a mx a:<i>myserver.example.com</i> include:_spf.google.com ~all"</code>
 		<p>
 			The important elements are:
 		</p>
